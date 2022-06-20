@@ -32,6 +32,9 @@ export class HomeComponent implements OnInit {
     { id: 4, picPath: '/../assets/4.jpg' },
     { id: 5, picPath: '/../assets/1.jpg' }]
 
+
+
+
   constructor() { }
 
   ngOnInit(): void {
