@@ -79,6 +79,11 @@
             text-transform: uppercase;
             line-height: 1.2;
             letter-spacing:4px;
+            transition: 0.3s;
+            &:hover{
+                background-color: white;
+                color: #626ffe;
+            }
         }
     }
 
@@ -126,9 +131,12 @@
                 letter-spacing: 3px;
                 a{
                     color: rgb(42, 42, 42);
-                    transition: 0.3s;
+                    transition: 0.5s;
+                    user-select: none;
+
                     &:hover{
                         color:#8e4aeb;
+                        text-decoration: underline;
                     }
                 }
             }
@@ -154,13 +162,15 @@
     }
     
     .welcome-links-row{
-
+        user-select: none;
         @extend %flexTempCenter;
         flex-wrap: wrap;
         margin-bottom: 5%;
+
         .welcome-links {
-            
-            margin-left: 40px;
+            position: relative;
+            max-width: 25%;
+            margin-left: 50px;
             margin-top: 10%;
             display: flex;
             align-items: center;
@@ -170,17 +180,20 @@
             transition: 0.3s;
             cursor: pointer;
 
+            overflow: hidden;
+
+            
             &:hover{
                 box-shadow: -10px 28px 5px -1px rgba(34, 60, 80, 0.4);
                 
                 .welcome-links-text{
                     background: #fff;
+                    
                 }
             }
 
-
             .welcome-links-pic {
-                width: 100%
+
             }
 
             .welcome-links-text {
@@ -190,12 +203,11 @@
                 justify-content: start;
                 flex-direction: column;
                 width: 100%;
-                height: 160px;
+                height: 200px;
                 background: #e8f2fe;
                 transition: 0.3s;
-
+                overflow: hidden;
                 span{
-                    
                     &:first-child{
                         
                         font-size: 14px;
@@ -210,6 +222,10 @@
                         font-size: 21px;
                         font-weight: bold;
                         line-height: 1.2;
+                        max-width: 80%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        height: 1.4cm;
                     }
                 }
             }
@@ -217,11 +233,11 @@
             
             .welcome-links-icon {
                 
-                margin-top: -60px;
+                position: absolute;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                
+                bottom: 20px;
                 a{
                     
                     display: flex;
