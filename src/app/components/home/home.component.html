@@ -46,56 +46,16 @@
         </div>
     </div>
     <div class="welcome-links-row">
-        <div class="welcome-links">
+        <div class="welcome-links" *ngFor="let item of linksArr">
             <div class="welcome-links-pic">
-                <img src="/../assets/welcomLink.jpg" alt="">
+                <img src="{{item.pathPic}}" alt="">
             </div>
             <div class="welcome-links-text">
                 <span>
-                    LOREM
+                    {{item.title}}
                 </span>
                 <span>
-                    Lorem ipsum dolor sit.
-                </span>
-            </div>
-            <div class="welcome-links-icon">
-                <a href="">
-                    <span class="material-icons">
-                        expand_more
-                    </span>
-                </a>
-            </div>
-        </div>
-        <div class="welcome-links">
-            <div class="welcome-links-pic">
-                <img src="/../assets/welcomLink.jpg" alt="">
-            </div>
-            <div class="welcome-links-text">
-                <span>
-                    LOREM
-                </span>
-                <span>
-                    Lorem ipsum dolor sit.
-                </span>
-            </div>
-            <div class="welcome-links-icon">
-                <a href="">
-                    <span class="material-icons">
-                        expand_more
-                    </span>
-                </a>
-            </div>
-        </div>
-        <div class="welcome-links">
-            <div class="welcome-links-pic">
-                <img src="/../assets/welcomLink.jpg" alt="">
-            </div>
-            <div class="welcome-links-text">
-                <span>
-                    LOREM
-                </span>
-                <span>
-                    Lorem ipsum dolor sit.
+                    {{item.text}}
                 </span>
             </div>
             <div class="welcome-links-icon">

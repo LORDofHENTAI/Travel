@@ -85,13 +85,13 @@
 
 .welcomecontainer {
 
-    width: 100vw;
-    height: 110vh;
-    flex-direction: column;
+    width: 100%;
+    min-height: 110vh;
     font-family: "Roboto";
     margin-top: 8%;
     @extend %flexTempCenter;
-
+    flex-direction: column;
+    flex-wrap: wrap;
     .welcom-item {
 
         @extend %flexTempCenter;
@@ -156,7 +156,8 @@
     .welcome-links-row{
 
         @extend %flexTempCenter;
-        
+        flex-wrap: wrap;
+        margin-bottom: 5%;
         .welcome-links {
             
             margin-left: 40px;
